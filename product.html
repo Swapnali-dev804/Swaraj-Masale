@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products | Swaraj Masale</title>
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header class="texture-bg">
+    <div class="nav-container">
+
+        <!-- LOGO -->
+        <img src="images/logo.png" alt="Swaraj Masale Logo" class="logo">
+
+        <!-- HAMBURGER RIGHT -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <!-- SLIDE MENU -->
+        <nav class="mobile-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="files/Rate card - Swaraj masale.pdf" download>Rate Card</a></li>
+            </ul>
+        </nav>
+
+        <!-- DARK OVERLAY -->
+        <label for="menu-toggle" class="menu-overlay"></label>
+
+    </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="section-light page-title">
+    <h2>Our Products</h2>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section-light">
+    <div class="product-grid">
+        
+
+        <!-- Add more products like this -->
+        <div class="product-card">
+            <img src="images/swaraj special chilli powder.jpg" alt="Turmeric Powder">
+            <h4>Swaraj Special Chilli Powder</h4>
+            <button class="btn-gold full-width order-btn"">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="images/special kashmiri chilli powder.jpg" alt="Turmeric Powder">
+            <h4>Special Kashmiri Chilli Powder</h4>
+            <button class="btn-gold full-width order-btn">Order Now</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="images/chicken biryani masala.jpg" alt="Turmeric Powder">
+            <h4>Chicken Biryani Masala</h4>
+            <button class="btn-gold full-width order-btn">Order Now</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="images/special bendgi chilli powder.jpg" alt="Turmeric Powder">
+            <h4>Special Bendagi Chilli Powder</h4>
+            <button class="btn-gold full-width order-btn">Order Now</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="images/kitchen king masala.jpg" alt="Turmeric Powder">
+            <h4>Kitchen King Masala</h4>
+            <button class="btn-gold full-width order-btn">Order Now</button>
+        </div>
+
+         <div class="product-card">
+                <img src="images/egg curry masala.jpg" alt="Turmeric Powder">
+                <h4 data-en="Egg Curry Masala" data-mr="अंडा करी मसाला">Egg Curry Masala</h4>
+                <button class="btn-gold full-width order-btn" data-product="Egg Curry Masala" data-en="Order Now"
+                    data-mr="आता ऑर्डर करा">
+                    Order Now
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/fish curry masala.jpg" alt="Turmeric Powder">
+                <h4 data-en="Fish Curry Masala" data-mr="मच्छी मसाला">Fish Curry Masala</h4>
+                <button class="btn-gold full-width order-btn" data-product="Fish Curry Masala" data-en="Order Now"
+                    data-mr="आता ऑर्डर करा">
+                    Order Now
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Shahi meat masala.jpg" alt="Turmeric Powder">
+                <h4 data-en="Shahi Meat Masala" data-mr="शाही मटन मसाला">Shahi Meat Masala</h4>
+                <button class="btn-gold full-width order-btn" data-product="Shahi Meat Masala" data-en="Order Now"
+                    data-mr="आता ऑर्डर करा">
+                    Order Now
+                            </button>
+        </div>
+        
+
+        <!-- ORDER MODAL -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="product">Select Product:</label>
+            <select id="product" required>
+                <option value="">--Select Product--</option>
+                <option value="Swaraj Special Chilli Powder">Swaraj Special Chilli Powder</option>
+                <option value="Special Kashmiri Chilli Powder">Special Kashmiri Chilli Powder</option>
+                <option value="Chicken Biryani Masala">Chicken Biryani Masala</option>
+                <option value="Special Bendagi Chilli Powder">Special Bendagi Chilli Powder</option>
+                <option value="Kitchen King Masala">Kitchen King Masala</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1" required>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" rows="3" required></textarea>
+
+            <button type="submit" class="btn-gold">Send via WhatsApp</button>
+        </form>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="texture-bg">
+    <div class="newsletter">
+        <h3>Join Our Spice Family</h3>
+        <p>Subscribe to Our Newsletter</p>
+
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="btn-gold">Subscribe</button>
+        </div>
+    </div>
+
+    <p class="copyright">
+        © 2025 Swaraj Masale. All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+<script>
+const modal = document.getElementById("orderModal");
+const closeBtn = document.querySelector(".modal .close");
+const orderForm = document.getElementById("orderForm");
+
+// Open modal when any "Order Now" button is clicked
+document.querySelectorAll(".btn-red").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        // Optional: pre-select product based on button index
+        const productName = btn.closest(".product-card").querySelector("h4").innerText;
+        document.getElementById("product").value = productName;
+        modal.style.display = "block";
+    });
+});
+
+// Close modal
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (event) => {
+    if (event.target == modal) modal.style.display = "none";
+};
+
+// Send order to WhatsApp
+orderForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const product = encodeURIComponent(document.getElementById("product").value);
+    const quantity = encodeURIComponent(document.getElementById("quantity").value);
+    const name = encodeURIComponent(document.getElementById("name").value);
+    const contact = encodeURIComponent(document.getElementById("contact").value);
+    const address = encodeURIComponent(document.getElementById("address").value);
+
+    const message = `Order Details:%0AProduct: ${product}%0AQuantity: ${quantity}%0AName: ${name}%0AContact: ${contact}%0AAddress: ${address}`;
+
+    // WhatsApp Web link (works on desktop & mobile)
+    const whatsappURL = `https://api.whatsapp.com/send?phone=919881386503&text=${message}`;
+window.open(whatsappURL, "_blank"); // open in new tab
+// open in new tab
+    modal.style.display = "none";       // close modal
+    orderForm.reset();                   // clear form
+});
+
+</script>
+
+</html>
