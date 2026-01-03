@@ -123,6 +123,9 @@
                 <option value="Chicken Biryani Masala">Chicken Biryani Masala</option>
                 <option value="Special Bendagi Chilli Powder">Special Bendagi Chilli Powder</option>
                 <option value="Kitchen King Masala">Kitchen King Masala</option>
+                <option value="Egg Curry Masala">Egg Curry Masala</option>
+                <option value="Fish Curry Masala">Fish Curry Masala</option>
+                <option value="Shahi Meat Masala">Shahi Meat Masala</option>
             </select>
 
             <label for="quantity">Quantity:</label>
@@ -169,7 +172,7 @@ const closeBtn = document.querySelector(".modal .close");
 const orderForm = document.getElementById("orderForm");
 
 // Open modal when any "Order Now" button is clicked
-document.querySelectorAll(".btn-red").forEach((btn, index) => {
+document.querySelectorAll(".btn-gold").forEach((btn, index) => {
     btn.addEventListener("click", () => {
         // Optional: pre-select product based on button index
         const productName = btn.closest(".product-card").querySelector("h4").innerText;
