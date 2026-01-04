@@ -546,3 +546,68 @@ footer {
 
 
 
+.packing-section {
+  max-width: 350px;
+  font-family: Poppins, sans-serif;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.packing-options {
+  display: flex;
+  gap: 10px;
+}
+
+.pack {
+  border: 2px solid #7b0d0d;
+  padding: 10px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pack.active {
+  background: #7b0d0d;
+  color: #fff;
+}
+
+.price {
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.price-qty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #7b0d0d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.qty-box button {
+  background: #7b0d0d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.qty-box input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+}
