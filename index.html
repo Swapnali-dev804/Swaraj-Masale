@@ -1,346 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Swaraj Masale | Home</title>
-    <link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
-<link rel="apple-touch-icon" href="/favicon.png">
-
-    <!-- REQUIRED FOR RESPONSIVENESS -->
-    <meta name="description" content="Buy authentic Indian spices like chilli powder, turmeric and garam masala from Swaraj Masale. Pure, fresh and homemade spices.">
-
-<meta name="keywords" content="Indian spices, chilli powder, turmeric powder, garam masala, Swaraj Masale">
-
-<meta name="author" content="Swaraj Masale">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <title>Swaraj Masale | Pure & Authentic Indian Spices</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <meta name="description" content="Buy authentic Indian spices like chilli powder, turmeric and garam masala from Swaraj Masale. Pure, fresh and homemade spices.">
+  <meta name="keywords" content="Indian spices, chilli powder, turmeric powder, garam masala, Swaraj Masale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="texture-bg">
-        <div class="nav-container">
+<!-- LOADER -->
+<div class="page-loader" id="loader">
+  <div class="loader-logo">Swaraj Masale</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
 
-            <!-- LOGO -->
-            <img src="images/logo.png" alt="Swaraj Masale Logo" class="logo">
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="about.html" onclick="closeMobile()">About Us</a>
+  <a href="product.html" onclick="closeMobile()">Products</a>
+  <a href="contact-us.html" onclick="closeMobile()">Contact</a>
+  <a href="files/Rate card - Swaraj masale.pdf" download onclick="closeMobile()">Rate Card</a>
+</div>
 
-            <!-- <div class="lang-switch">
-                <button onclick="setLanguage('en')">EN</button>
-                <button onclick="setLanguage('mr')">मराठी</button>
-            </div> -->
-            <!-- HAMBURGER RIGHT -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Swaraj Masale"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="product.html">Products</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="window.location='files/Rate card - Swaraj masale.pdf'">Rate Card &#8595;</button>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-            <!-- SLIDE MENU -->
-            <nav class="mobile-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
-                    <li><a href="files/Rate card - Swaraj masale.pdf" download>Rate Card</a></li>
-                </ul>
-            </nav>
-
-            <!-- DARK OVERLAY -->
-            <label for="menu-toggle" class="menu-overlay"></label>
-
-        </div>
-    </header>
-
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 data-en="Pure & Authentic Indian Spices" data-mr="शुद्ध आणि अस्सल भारतीय मसाले">
-                Pure & Authentic <br> Indian Spices
-            </h1>
-            <button class="btn-gold" data-en="Explore Spices" data-mr="मसाले पहा">
-                Explore Spices
-            </button>
-        </div>
-    </section>
-
-    <!-- BEST SELLERS -->
-    <section class="section-light">
-        <h2>Our Best Sellers</h2>
-        <p class="subtitle">Spices that Define Perfection</p>
-
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/swaraj special chilli powder.jpg" alt="Turmeric Powder">
-                <h4 data-en="Swaraj Special Chilli Powder(1 kg)" data-mr="स्वराज स्पेशल काश्मीरी मिरची पावडर">Swaraj
-                    Special
-                    Chilli Powder (1kg)</h4>
-                <p class="price">
-                    Price: ₹<span id="price">320</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Swaraj Special Chilli Powder" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/special kashmiri chilli powder.jpg" alt="Turmeric Powder">
-                <h4 data-en="Special Kashmiri Chilli Powder(1 kg)" data-mr="काश्मीरी मिरची पावडर">Special Kashmiri
-                    Chilli Powder (1kg) </h4>
-                <p class="price">
-                    Price: ₹<span id="price">300</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Special Kashmiri Chilli Powder" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/chicken biryani masala.jpg" alt="Turmeric Powder">
-                <h4 data-en="Chicken Biryani Masala (1 kg)" data-mr="शाही बिर्याणी मसाला">Chicken Biryani Masala (1 kg)
-                </h4>
-                <p class="price">
-                    Price: ₹<span id="price">560</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Chicken Biryani Masala" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/special bendgi chilli powder.jpg" alt="Turmeric Powder">
-                <h4 data-en="Special Bendagi Chilli Powder(1 kg)" data-mr="स्पेशल बेंडगी मिरची पावडर">Special Bendagi
-                    Chilli Powder (1 kg)</h4>
-                <p class="price">
-                    Price: ₹<span id="price">270</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Special Bendagi Chilli Powder" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class=" product-card">
-                <img src="images/kitchen king masala.jpg" alt="Turmeric Powder">
-                <h4 data-en="Kitchen King Masala (1 kg)" data-mr="किचन किंग मसाला">Kitchen King Masala (1 kg)</h4>
-                <p class="price">
-                    Price: ₹<span id="price">480</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Kitchen King Masala" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/egg curry masala.jpg" alt="Turmeric Powder">
-                <h4 data-en="Egg Curry Masala (1 kg)" data-mr="अंडा करी मसाला">Egg Curry Masala (1 kg)</h4>
-                <p class="price">
-                    Price: ₹<span id="price">480</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Egg Curry Masala" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/fish curry masala.jpg" alt="Turmeric Powder">
-                <h4 data-en="Fish Curry Masala (1 kg)" data-mr="मच्छी मसाला">Fish Curry Masala (1 kg)</h4>
-                <p class="price">
-                    Price: ₹<span id="price">480</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Fish Curry Masala" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/Shahi meat masala.jpg" alt="Turmeric Powder">
-                <h4 data-en="Shahi Meat Masala (1 kg)" data-mr="शाही मटन मसाला">Shahi Meat Masala (1 kg)</h4>
-                <p class="price">
-                    Price: ₹<span id="price">520</span>
-                </p>
-                <button class="btn-red order-btn" data-product="Shahi Meat Masala" data-en="Order Now"
-                    data-mr="आता ऑर्डर करा">
-                    Order Now
-                </button>
-            </div>
-
-            <!-- ORDER MODAL -->
-
-            <div id="orderModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Place Your Order</h2>
-
-                    <form id="orderForm">
-                        <label for="product">Select Product:</label>
-                        <select id="product" required>
-                            <option value="">--Select Product--</option>
-                            <option value="Swaraj Special Chilli Powder">Swaraj Special Chilli Powder</option>
-                            <option value="Special Kashmiri Chilli Powder">Special Kashmiri Chilli Powder</option>
-                            <option value="Chicken Biryani Masala">Chicken Biryani Masala</option>
-                            <option value="Special Bendagi Chilli Powder">Special Bendagi Chilli Powder</option>
-                            <option value="Kitchen King Masala">Kitchen King Masala</option>
-                            <option value="Egg Curry Masala">Egg Curry Masala</option>
-                            <option value="Fish Curry Masala">Fish Curry Masala</option>
-                            <option value="Shahi Meat Masala">Shahi Meat Masala</option>
-                        </select>
-
-
-                        <!-- ✅ Packing Type Added -->
-                        <label for="packing">Packing Type:</label>
-                        <select id="packing" required>
-                            <option value="">--Select Packing--</option>
-                            <option value="10 Rs. Pouches">10 Rs. Pouches</option>
-                            <option value="150 g Jar">150 g Jar</option>
-                            <option value="500 g">500 g</option>
-                            <option value="1 Kg">1 Kg</option>
-                        </select>
-
-                        <label for="quantity">Quantity:</label>
-                        <input type="number" id="quantity" min="1" value="1" required>
-
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" required>
-
-                        <label for="contact">Contact Number:</label>
-                        <input type="tel" id="contact" required>
-
-                        <label for="address">Address:</label>
-                        <textarea id="address" rows="3" required></textarea>
-
-                        <button type="submit" class="btn-gold">
-                            Send via WhatsApp
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-    </section>
-
-    <!-- RECIPES 
-    
-<section class="texture-bg">
-    <h2>Delicious Recipes</h2>
-    <p class="subtitle gold">Spice Up Your Cooking!</p>
-
-    <div class="recipe-grid">
-        <div class="recipe-card">
-            <img src="images/paneer-tikka.jpg" alt="Paneer Tikka">
-            <div class="card-body">
-                <h4>Paneer Tikka</h4>
-                <button class="btn-red">View Recipe</button>
-            </div>
-        </div>
+<!-- ANIMATED HERO SLIDER -->
+<section class="hero" id="heroSection">
+  <!-- SLIDE BACKGROUNDS -->
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active" style="background-image:url('images/hero-slide-1.jpeg')">
+      <div class="hero-slide-overlay"></div>
     </div>
-</section> -->
+    <div class="hero-slide" style="background-image:url('images/hero-slide-3.jpeg')">
+      <div class="hero-slide-overlay"></div>
+    </div>
+    <div class="hero-slide" style="background-image:url('images/hero-slide-2.jpeg')">
+      <div class="hero-slide-overlay"></div>
+    </div>
+  </div>
 
-    <!-- FEATURES -->
-    <section class="section-light">
-        <h2>Authentic Indian Flavors</h2>
-        <p class="description">
-            Experience the true taste of India with our pure and aromatic spices.
-        </p>
+  <!-- FLOATING SPICE PARTICLES -->
+  <div class="hero-particles" id="heroParticles"></div>
 
-        <div class="features">
-            <div>
-                <img src="images/icon-natural.png">
-                <p>100% Natural Ingredients</p>
-            </div>
-            <div>
-                <img src="images/icon-recipe.png">
-                <p>Traditional Recipes</p>
-            </div>
-            <div>
-                <img src="images/icon-quality.png">
-                <p>Premium Quality</p>
-            </div>
+  <!-- HERO CONTENT -->
+  <div class="hero-content" id="heroContent">
+    <div class="hero-badge anim-in">&#10022; Since 2024 &nbsp;&middot;&nbsp; Maharashtra, India &#10022;</div>
+
+    <!-- SLIDE TEXTS -->
+    <div class="slide-texts">
+      <div class="slide-text active">
+        <h1 class="anim-in anim-d1">Pure &amp; <em>Authentic</em><br>Indian Spices</h1>
+        <p class="hero-sub anim-in anim-d2">Crafted with time-honored recipes, our spices bring the true soul of India to every dish you create.</p>
+      </div>
+      <div class="slide-text">
+        <h1>The Finest <em>Kashmiri</em><br>Chilli Powder</h1>
+        <p class="hero-sub">Rich colour, smoky depth, zero artificial additives &mdash; pure Kashmir in every pinch.</p>
+      </div>
+      <div class="slide-text">
+        <h1>Signature <em>Masale</em><br>Blends</h1>
+        <p class="hero-sub">From biryani to curries &mdash; our handcrafted masale blends make every meal extraordinary.</p>
+      </div>
+    </div>
+
+    <div class="hero-actions anim-in anim-d3">
+      <a href="product.html" class="btn-primary">Explore Spices &#8594;</a>
+      <a href="contact-us.html" class="btn-outline">Order Now</a>
+    </div>
+  </div>
+
+  <!-- SLIDE INDICATORS -->
+  <div class="hero-indicators">
+    <button class="hero-dot active" onclick="goSlide(0)"></button>
+    <button class="hero-dot" onclick="goSlide(1)"></button>
+    <button class="hero-dot" onclick="goSlide(2)"></button>
+  </div>
+
+  <!-- SLIDE ARROWS -->
+  <button class="hero-arrow left" onclick="prevSlide()">&#8592;</button>
+  <button class="hero-arrow right" onclick="nextSlide()">&#8594;</button>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar reveal">
+  <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Spice Varieties</div></div>
+  <div class="stat-item"><div class="stat-number">10K+</div><div class="stat-label">Happy Customers</div></div>
+  <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Natural Ingredients</div></div>
+  <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Years of Legacy</div></div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="marquee-item hl">&#10022; Chilli Powder</span>
+    <span class="marquee-item">KASHMIRI MIRCHI</span>
+    <span class="marquee-item hl">&#10022; Chicken Masala</span>
+    <span class="marquee-item">BIRYANI MASALA</span>
+    <span class="marquee-item hl">&#10022; Kitchen King</span>
+    <span class="marquee-item">FISH CURRY MASALA</span>
+    <span class="marquee-item hl">&#10022; Shahi Meat Masala</span>
+    <span class="marquee-item">EGG CURRY MASALA</span>
+    <span class="marquee-item hl">&#10022; Chilli Powder</span>
+    <span class="marquee-item">KASHMIRI MIRCHI</span>
+    <span class="marquee-item hl">&#10022; Chicken Masala</span>
+    <span class="marquee-item">BIRYANI MASALA</span>
+    <span class="marquee-item hl">&#10022; Kitchen King</span>
+    <span class="marquee-item">FISH CURRY MASALA</span>
+    <span class="marquee-item hl">&#10022; Shahi Meat Masala</span>
+    <span class="marquee-item">EGG CURRY MASALA</span>
+  </div>
+</div>
+
+<!-- BESTSELLERS -->
+<section class="bestsellers">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Fan Favourites</span>
+    <h2>Our <em>Bestsellers</em></h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="product-grid-3">
+    <div class="pcard reveal reveal-d1">
+      <div class="pcard-badge">Best Seller</div>
+      <div class="pcard-img-wrap">
+        <img src="images/swaraj special chilli powder.jpg" alt="Swaraj Special Chilli Powder">
+        <div class="pcard-overlay"></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Swaraj Special Chilli Powder</div>
+        <div class="pcard-weight">1 Kilogram &middot; Pure Ground</div>
+        <div class="pcard-footer">
+          <div class="pcard-price"><span>&#8377;</span>320</div>
+          <button class="btn-add" onclick="addToCart('Swaraj Special Chilli Powder',320)">Add to Cart</button>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="texture-bg">
-        <div class="newsletter">
-            <h3>Join Our Spice Family</h3>
-            <p>Subscribe to Our Newsletter</p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Enter your email">
-                <button class="btn-gold">Subscribe</button>
-            </div>
+      </div>
+    </div>
+    <div class="pcard reveal reveal-d2">
+      <div class="pcard-badge">Top Pick</div>
+      <div class="pcard-img-wrap">
+        <img src="images/special kashmiri chilli powder.jpg" alt="Kashmiri Chilli Powder">
+        <div class="pcard-overlay"></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Special Kashmiri Chilli Powder</div>
+        <div class="pcard-weight">1 Kilogram &middot; Rich Colour</div>
+        <div class="pcard-footer">
+          <div class="pcard-price"><span>&#8377;</span>300</div>
+          <button class="btn-add" onclick="addToCart('Special Kashmiri Chilli Powder',300)">Add to Cart</button>
         </div>
+      </div>
+    </div>
+    <div class="pcard reveal reveal-d3">
+      <div class="pcard-img-wrap">
+        <img src="images/special bendgi chilli powder.jpg" alt="Bendagi Chilli Powder">
+        <div class="pcard-overlay"></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Special Bendagi Chilli Powder</div>
+        <div class="pcard-weight">1 Kilogram &middot; Smoky Flavour</div>
+        <div class="pcard-footer">
+          <div class="pcard-price"><span>&#8377;</span>270</div>
+          <button class="btn-add" onclick="addToCart('Special Bendagi Chilli Powder',270)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <p class="copyright">
-            © 2025 Swaraj Masale. All Rights Reserved.
-        </p>
-    </footer>
+<!-- MASALA CAROUSEL -->
+<section class="masala-section">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Our Signature Range</span>
+    <h2>Swaraj <em>Special</em> Masale</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="carousel-wrap reveal">
+    <div class="carousel-track" id="masalaTrack">
+      <div class="pcard">
+        <div class="pcard-img-wrap"><img src="images/chicken biryani masala.jpg" alt="Chicken Biryani Masala"><div class="pcard-overlay"></div></div>
+        <div class="pcard-body">
+          <div class="pcard-name">Chicken Biryani Masala</div>
+          <div class="pcard-weight">1 Kilogram &middot; Aromatic Blend</div>
+          <div class="pcard-footer">
+            <div class="pcard-price"><span>&#8377;</span>560</div>
+            <button class="btn-add" onclick="addToCart('Chicken Biryani Masala',560)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-img-wrap"><img src="images/kitchen king masala.jpg" alt="Kitchen King Masala"><div class="pcard-overlay"></div></div>
+        <div class="pcard-body">
+          <div class="pcard-name">Kitchen King Masala</div>
+          <div class="pcard-weight">1 Kilogram &middot; All-Purpose</div>
+          <div class="pcard-footer">
+            <div class="pcard-price"><span>&#8377;</span>480</div>
+            <button class="btn-add" onclick="addToCart('Kitchen King Masala',480)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-img-wrap"><img src="images/egg curry masala.jpg" alt="Egg Curry Masala"><div class="pcard-overlay"></div></div>
+        <div class="pcard-body">
+          <div class="pcard-name">Egg Curry Masala</div>
+          <div class="pcard-weight">1 Kilogram &middot; Balanced Spice</div>
+          <div class="pcard-footer">
+            <div class="pcard-price"><span>&#8377;</span>480</div>
+            <button class="btn-add" onclick="addToCart('Egg Curry Masala',480)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-img-wrap"><img src="images/fish curry masala.jpg" alt="Fish Curry Masala"><div class="pcard-overlay"></div></div>
+        <div class="pcard-body">
+          <div class="pcard-name">Fish Curry Masala</div>
+          <div class="pcard-weight">1 Kilogram &middot; Coastal Blend</div>
+          <div class="pcard-footer">
+            <div class="pcard-price"><span>&#8377;</span>480</div>
+            <button class="btn-add" onclick="addToCart('Fish Curry Masala',480)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-badge">Premium</div>
+        <div class="pcard-img-wrap"><img src="images/Shahi meat masala.jpg" alt="Shahi Meat Masala"><div class="pcard-overlay"></div></div>
+        <div class="pcard-body">
+          <div class="pcard-name">Shahi Meat Masala</div>
+          <div class="pcard-weight">1 Kilogram &middot; Rich &amp; Bold</div>
+          <div class="pcard-footer">
+            <div class="pcard-price"><span>&#8377;</span>520</div>
+            <button class="btn-add" onclick="addToCart('Shahi Meat Masala',520)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-badge">Premium</div>
+        <div class="pcard-img-wrap"><img src="images/Shahi chicken masala.jpg" alt="Shahi Chicken Masala"><div class="pcard-overlay"></div></div>
+        <div class="pcard-body">
+          <div class="pcard-name">Shahi Chicken Masala</div>
+          <div class="pcard-weight">1 Kilogram &middot; Royal Recipe</div>
+          <div class="pcard-footer">
+            <div class="pcard-price"><span>&#8377;</span>520</div>
+            <button class="btn-add" onclick="addToCart('Shahi Chicken Masala',520)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button class="carr-btn" id="carrLeft">&#8592;</button>
+    <button class="carr-btn" id="carrRight">&#8594;</button>
+  </div>
+</section>
 
-</body>
+<!-- WHY US -->
+<section class="why-section">
+  <div class="why-grid">
+    <div class="why-visual reveal">
+      <img src="images/Chilly Craft.png" alt="About Swaraj Masale" class="why-img-main">
+      <img src="images/Swaraj advertisement.jpg" alt="Spices" class="why-img-accent">
+      <div class="why-stamp"><span class="n">15</span><span class="l">Years of<br>Excellence</span></div>
+    </div>
+    <div class="why-features reveal">
+      <div class="section-header" style="text-align:left;margin-bottom:38px;">
+        <span class="section-eyebrow">The Swaraj Difference</span>
+        <h2>Authentic <em>Indian</em><br>Flavors</h2>
+        <div class="section-rule left"></div>
+      </div>
+      <div class="why-feature">
+        <div class="why-icon-box"><img src="images/icon-natural1.png" alt="Natural"></div>
+        <div>
+          <h4>100% Natural Ingredients</h4>
+          <p>Made with pure, chemical-free ingredients sourced directly from the finest farms across India. No additives, no compromise.</p>
+        </div>
+      </div>
+      <div class="why-feature">
+        <div class="why-icon-box"><img src="images/icon-recipe2.png" alt="Recipe"></div>
+        <div>
+          <h4>Traditional Family Recipes</h4>
+          <p>Every blend follows time-tested methods passed down through generations, preserving the authentic taste and nutritional goodness.</p>
+        </div>
+      </div>
+      <div class="why-feature">
+        <div class="why-icon-box"><img src="images/icon-quality2.png" alt="Quality"></div>
+        <div>
+          <h4>Premium Quality Assurance</h4>
+          <p>Carefully crafted and rigorously quality-checked at every step to deliver the excellence and consistency you can always trust.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonial-section">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Customer Stories</span>
+    <h2>What Our <em>Customers</em> Say</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="testimonials-grid reveal">
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="tcard-text">The Kashmiri chilli powder gives my food that beautiful red colour without excessive heat. My entire family loves it!</div>
+      <div class="tcard-author">
+        <div class="tcard-avatar">P</div>
+        <div><div class="tcard-name">Priya Sharma</div><div class="tcard-loc">Pune, Maharashtra</div></div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="tcard-text">The biryani masala is phenomenal &mdash; restaurant-quality results at home every single time. Truly authentic flavours!</div>
+      <div class="tcard-author">
+        <div class="tcard-avatar">R</div>
+        <div><div class="tcard-name">Rahul Desai</div><div class="tcard-loc">Nashik, Maharashtra</div></div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <div class="tcard-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="tcard-text">Ordering through WhatsApp is so convenient! Fast delivery and the spices are always fresh. Highly recommend Swaraj!</div>
+      <div class="tcard-author">
+        <div class="tcard-avatar">A</div>
+        <div><div class="tcard-name">Anjali Patil</div><div class="tcard-loc">Mumbai, Maharashtra</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="newsletter-inner reveal">
+    <h2>Join Our <em>Spice</em> Family</h2>
+    <p>Subscribe to receive recipes, seasonal offers, and the latest from our kitchen.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Swaraj Masale">
+      <p>Pure, aromatic, and authentically crafted Indian spices from the heart of Maharashtra. Bringing generations of flavour to your table.</p>
+      <div class="footer-social">
+        <a href="#" class="social-pill">WA</a>
+        <a href="#" class="social-pill">FB</a>
+        <a href="#" class="social-pill">IG</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="files/Rate card - Swaraj masale.pdf" download>Rate Card</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Products</h5>
+      <ul>
+        <li><a href="product.html">Chilli Powders</a></li>
+        <li><a href="product.html">Biryani Masala</a></li>
+        <li><a href="product.html">Meat Masala</a></li>
+        <li><a href="product.html">Kitchen King</a></li>
+        <li><a href="product.html">Fish Masala</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <div class="footer-contact-item"><span class="ic">&#128222;</span><span>+91 9834879138</span></div>
+      <div class="footer-contact-item"><span class="ic">&#128222;</span><span>+91 9881386503</span></div>
+      <div class="footer-contact-item"><span class="ic">&#128205;</span><span>Maharashtra, India</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2025 Swaraj Masale. All Rights Reserved.</p>
+    <div class="dev-credit">Technology Partner: <span>Lighthouse Institute, India</span></div>
+  </div>
+</footer>
+
+<!-- CART FLOAT -->
+<button class="cart-float" onclick="openCart()">
+  &#128722; Place Order
+  <span class="cart-badge" id="cartCount">0</span>
+</button>
+
+<!-- CART MODAL -->
+<div class="modal-bg" id="cartModal">
+  <div class="cart-panel">
+    <div class="cart-panel-header">
+      <h3>Your Cart</h3>
+      <button class="close-btn" onclick="closeCart()">&#10005;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p style="color:var(--text-muted);text-align:center;padding:40px 20px;font-size:0.9rem;">Your cart is empty &#128722;</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Order Total</span>
+        <strong id="cartTotal">&#8377;0</strong>
+      </div>
+      <div class="cart-fields">
+        <input type="text" id="custName" placeholder="Your Name *">
+        <input type="tel" id="custPhone" placeholder="Contact Number *">
+        <textarea id="custAddress" placeholder="Delivery Address *" rows="2"></textarea>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">&#128241; Send Order via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
 <script>
-    const modal = document.getElementById("orderModal");
-    const closeBtn = document.querySelector(".modal .close");
-    const orderForm = document.getElementById("orderForm");
+// LOADER
+window.addEventListener('load', () => {
+  setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 1600);
+});
 
-    // Open modal when any "Order Now" button is clicked
-    document.querySelectorAll(".btn-red").forEach((btn) => {
-        btn.addEventListener("click", () => {
+// NAVBAR SCROLL
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
 
-            const productName = btn.dataset.product; // ✅ correct value
+// MOBILE MENU
+function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
 
-            document.getElementById("product").value = productName;
-            modal.style.display = "block";
-        });
-    });
+// SCROLL REVEAL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// ===== HERO SLIDER =====
+var currentSlide = 0;
+var slideTimer = null;
+var totalSlides = 3;
 
-    // Close modal
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (event) => {
-        if (event.target == modal) modal.style.display = "none";
-    };
+function goSlide(n) {
+  var slides = document.querySelectorAll('.hero-slide');
+  var texts = document.querySelectorAll('.slide-text');
+  var dots = document.querySelectorAll('.hero-dot');
+  if (!slides.length) return;
 
-    // Send order to WhatsApp
-    orderForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const product = encodeURIComponent(document.getElementById("product").value);
-        const quantity = encodeURIComponent(document.getElementById("quantity").value);
-        const name = encodeURIComponent(document.getElementById("name").value);
-        const contact = encodeURIComponent(document.getElementById("contact").value);
-        const address = encodeURIComponent(document.getElementById("address").value);
-        const packing = document.getElementById("packing").value;
+  slides[currentSlide].classList.remove('active');
+  texts[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
 
-        const message = `Order Details:%0AProduct: ${product}%0A Packing: ${packing}%0AQuantity: ${quantity}%0AName: ${name}%0AContact: ${contact}%0AAddress: ${address}`;
+  currentSlide = (n + totalSlides) % totalSlides;
 
-        // WhatsApp Web link (works on desktop & mobile)
-        const whatsappURL = `https://api.whatsapp.com/send?phone=919834879138&text=${message}`;
-        window.open(whatsappURL, "_blank"); // open in new tab
-        // open in new tab
-        modal.style.display = "none";       // close modal
-        orderForm.reset();                   // clear form
-    });
+  slides[currentSlide].classList.add('active');
+  texts[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
 
-    function setLanguage(lang) {
-        document.querySelectorAll("[data-en]").forEach(el => {
-            el.innerText = el.getAttribute(`data-${lang}`);
-        });
+  clearTimeout(slideTimer);
+  slideTimer = setTimeout(nextSlide, 5000);
+}
+function nextSlide() { goSlide(currentSlide + 1); }
+function prevSlide() { goSlide(currentSlide - 1); }
 
-        localStorage.setItem("language", lang);
-    }
+// Auto-start slider
+slideTimer = setTimeout(nextSlide, 5000);
+window.goSlide = goSlide;
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
 
-    // Load saved language
-    document.addEventListener("DOMContentLoaded", () => {
-        const savedLang = localStorage.getItem("language") || "en";
-        setLanguage(savedLang);
-    });
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') prevSlide();
+  if (e.key === 'ArrowRight') nextSlide();
+});
 
+// ===== HERO PARTICLES =====
+(function createParticles() {
+  var container = document.getElementById('heroParticles');
+  if (!container) return;
+  var symbols = ['&#9670;', '&#9733;', '&#10022;', '&#8226;'];
+  for (var i = 0; i < 20; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    p.style.animationDelay = (Math.random() * 8) + 's';
+    p.style.animationDuration = (6 + Math.random() * 8) + 's';
+    p.style.fontSize = (8 + Math.random() * 12) + 'px';
+    p.style.opacity = (0.08 + Math.random() * 0.15) + '';
+    container.appendChild(p);
+  }
+})();
+
+// CAROUSEL
+const track = document.getElementById('masalaTrack');
+if (track) {
+  const cards = track.querySelectorAll('.pcard');
+  let carIdx = 0;
+  function getSlideWidth() {
+    const gap = 22;
+    return cards[0].offsetWidth + gap;
+  }
+  function getMaxIdx() {
+    const vis = Math.floor(track.parentElement.offsetWidth / getSlideWidth());
+    return Math.max(0, cards.length - vis);
+  }
+  function moveCar() {
+    track.style.transform = 'translateX(-' + (carIdx * getSlideWidth()) + 'px)';
+    document.getElementById('carrLeft').disabled = carIdx === 0;
+    document.getElementById('carrRight').disabled = carIdx >= getMaxIdx();
+  }
+  document.getElementById('carrRight').addEventListener('click', () => { if (carIdx < getMaxIdx()) { carIdx++; moveCar(); } });
+  document.getElementById('carrLeft').addEventListener('click', () => { if (carIdx > 0) { carIdx--; moveCar(); } });
+  setInterval(() => { carIdx = carIdx >= getMaxIdx() ? 0 : carIdx + 1; moveCar(); }, 3500);
+  window.addEventListener('resize', moveCar);
+  moveCar();
+}
+
+// MODAL BG CLOSE
+document.getElementById('cartModal').addEventListener('click', function(e) { if (e.target === this) closeCart(); });
+
+window.toggleMobile = toggleMobile;
+window.closeMobile = closeMobile;
 </script>
-
+<script src="scripts/scripts.js"></script>
+</body>
 </html>

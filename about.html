@@ -1,139 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About us| Swaraj Masale</title>
-<link rel="icon" href="logo.png" type="image/png">
-    <!-- REQUIRED -->
-    <meta name="description" content="Buy authentic Indian spices like chilli powder, turmeric and garam masala from Swaraj Masale. Pure, fresh and homemade spices.">
-
-<meta name="keywords" content="Indian spices, chilli powder, turmeric powder, garam masala, Swaraj Masale">
-
-<meta name="author" content="Swaraj Masale">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <title>About Us | Swaraj Masale</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <meta name="description" content="Buy authentic Indian spices like chilli powder, turmeric and garam masala from Swaraj Masale.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/pages.css">
 </head>
 <body>
-
-<!-- HEADER -->
-
-<header class="texture-bg">
-    <div class="nav-container">
-
-        <!-- LOGO -->
-        <img src="images/logo.png" alt="Swaraj Masale Logo" class="logo">
-
-        <!-- HAMBURGER RIGHT -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-
-        <!-- SLIDE MENU -->
-        <nav class="mobile-nav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html"class="active">About Us</a></li>
-                <li><a href="product.html" >Products</a></li>
-                
-                <li><a href="contact-us.html">Contact</a></li>
-                 <li><a href="files/Rate card - Swaraj masale.pdf" download>Rate Card</a></li>
-            </ul>
-        </nav>
-
-        <!-- DARK OVERLAY -->
-        <label for="menu-toggle" class="menu-overlay"></label>
-
-    </div>
-</header>
-
-
-<section class="about-section">
-    <div class="about-container">
-
-        <h2 class="about-title">About Us</h2>
-
-        <p class="about-text">
-            <strong>Swaraj Spices</strong> believes that great taste begins with purity.
-            Our spices, including hot varieties, contain <strong>no artificial colors</strong>,
-            making them a safe and healthy choice for your family.
-        </p>
-
-        <p class="about-text">
-            We prepare our spices using <strong>fresh and natural ingredients</strong>,
-            carefully selected to enhance authentic flavors.
-            Each blend adds a special touch to your meals, giving every dish a unique taste and aroma.
-        </p>
-
-        <p class="about-highlight">
-            Experience our products and bring natural taste to your meals!
-        </p>
-
-        <hr class="about-divider">
-
-        <h3 class="about-title-marathi">आमच्याबद्दल</h3>
-
-        <p class="about-text">
-            <strong>स्वराज मसाले</strong> येथे आम्ही शुद्धता आणि गुणवत्तेला प्राधान्य देतो.
-            आमच्या तिखटांसह सर्व मसाल्यांमध्ये <strong>कोणतेही कृत्रिम रंग नाहीत</strong>,
-            त्यामुळे ते आपल्या कुटुंबासाठी सुरक्षित आणि आरोग्यदायी आहेत.
-        </p>
-
-        <p class="about-text">
-            आमचे मसाले <strong>ताज्या आणि नैसर्गिक घटकांपासून</strong> तयार केले जातात,
-            जे आपल्या जेवणाला खास चव आणि सुगंध देतात.
-            प्रत्येक पदार्थासाठी योग्य असा मसाल्यांचा परिपूर्ण संगम आम्ही देतो.
-        </p>
-
-        <p class="about-highlight">
-            आमच्या उत्पादनांचा अनुभव घ्या आणि आपल्या जेवणात नैसर्गिक चव आणा!
-        </p>
-
-    </div>
-
-</section>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="about.html" onclick="closeMobile()">About Us</a>
+  <a href="product.html" onclick="closeMobile()">Products</a>
+  <a href="contact-us.html" onclick="closeMobile()">Contact</a>
+  <a href="files/Rate card - Swaraj masale.pdf" download onclick="closeMobile()">Rate Card</a>
+</div>
+<nav class="navbar scrolled" id="navbar">
+  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Swaraj Masale"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="nav-active">About</a></li>
+    <li><a href="product.html">Products</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
     
-    <section class="section-light">
-    <h2>Authentic Indian Flavors</h2>
-    <p class="description">
-        Experience the true taste of India with our pure and aromatic spices.
-    </p>
+  </ul>
+  <button class="nav-cta" onclick="window.location='files/Rate card - Swaraj masale.pdf'">Rate Card &#8595;</button>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-content reveal">
+    <span class="page-hero-eyebrow">&#10022; Our Story &#10022;</span>
+    <h1>About <em>Swaraj</em> Masale</h1>
+    <p>Rooted in Maharashtra. Crafted with love. Served with purity.</p>
+  </div>
+</div>
 
-    <div class="features">
-        <div>
-            <img src="images/icon-natural.png">
-            <p>100% Natural Ingredients</p>
-        </div>
-        <div>
-            <img src="images/icon-recipe.png">
-            <p>Traditional Recipes</p>
-        </div>
-        <div>
-            <img src="images/icon-quality.png">
-            <p>Premium Quality</p>
-        </div>
+<section class="story-section">
+  <div class="story-grid">
+    <div class="story-visual reveal">
+      <img src="images/about-collage.jpg" alt="About Swaraj Masale" class="story-main-img">
+      <div class="story-accent-card">
+        <span class="ac-n">15</span>
+        <span class="ac-l">Years of<br>Pure Taste</span>
+      </div>
     </div>
+    <div class="story-text reveal">
+      <span class="section-eyebrow">Who We Are</span>
+      <h2>A Legacy of <em>Purity</em></h2>
+      <div class="section-rule left"></div>
+      <p class="story-lead">At Swaraj Masale, great taste begins with purity. Our spices contain <strong>no artificial colors</strong> &mdash; making them safe and healthy for every family.</p>
+      <p class="story-body">We prepare our spices using <strong>fresh and natural ingredients</strong>, carefully selected to enhance authentic flavors. Each blend gives every dish a unique taste and aroma that takes you to the heart of India.</p>
+      <p class="story-body">Founded with a simple promise to deliver honest, unadulterated spices, Swaraj Masale has grown from a home kitchen in Ratnagiri to serving thousands of happy customers across Maharashtra and beyond.</p>
+      <a href="product.html" class="btn-primary" style="margin-top:32px;display:inline-flex;">Explore Our Products &#8594;</a>
+    </div>
+  </div>
 </section>
 
-
-    
-    
-    <!-- FOOTER -->
-<footer class="texture-bg">
-    <div class="newsletter">
-        <h3>Join Our Spice Family</h3>
-        <p>Subscribe to Our Newsletter</p>
-        <div class="newsletter-form">
-            <input type="email" placeholder="Enter your email">
-            <button class="btn-gold">Subscribe</button>
-        </div>
+<section class="marathi-section">
+  <div class="marathi-inner reveal">
+    <div class="marathi-badge">&#10022; मराठी &#10022;</div>
+    <h2 class="marathi-title">आमच्याबद्दल</h2>
+    <div class="marathi-text-grid">
+      <p><strong>स्वराज मसाले</strong> येथे आम्ही शुद्धता आणि गुणवत्तेला प्राधान्य देतो. आमच्या तिखटांसह सर्व मसाल्यांमध्ये <strong>कोणतेही कृत्रिम रंग नाहीत</strong>, त्यामुळे ते आपल्या कुटुंबासाठी सुरक्षित आणि आरोग्यदायी आहेत.</p>
+      <p>आमचे मसाले <strong>ताज्या आणि नैसर्गिक घटकांपासून</strong> तयार केले जातात, जे आपल्या जेवणाला खास चव आणि सुगंध देतात. प्रत्येक पदार्थासाठी योग्य असा मसाल्यांचा परिपूर्ण संगम आम्ही देतो.</p>
     </div>
+    <p class="marathi-highlight">आमच्या उत्पादनांचा अनुभव घ्या आणि आपल्या जेवणात नैसर्गिक चव आणा!</p>
+  </div>
+</section>
 
-    <p class="copyright">
-        © 2025 Swaraj Masale. All Rights Reserved.
-    </p>
+<section class="values-section">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">What We Stand For</span>
+    <h2>Our Core <em>Values</em></h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="values-grid reveal">
+    <div class="value-card">
+      <div class="value-icon"><img src="images/icon-natural1.png" alt="Natural"></div>
+      <h4>100% Natural</h4>
+      <p>Chemical-free ingredients sourced directly from trusted farms. No additives, no shortcuts.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><img src="images/icon-recipe2.png" alt="Traditional"></div>
+      <h4>Traditional Recipes</h4>
+      <p>Time-tested methods passed through generations to preserve authentic taste and goodness.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><img src="images/icon-quality2.png" alt="Quality"></div>
+      <h4>Premium Quality</h4>
+      <p>Rigorous quality checks at every stage to deliver consistency you can always rely on.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="font-size:2rem;display:flex;align-items:center;justify-content:center;">&#128091;</div>
+      <h4>Family Trust</h4>
+      <p>Safe for every member of your family &mdash; from children to elders. That is our promise.</p>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="marquee-item hl">&#10022; Pure Spices</span><span class="marquee-item">NO ARTIFICIAL COLOR</span>
+    <span class="marquee-item hl">&#10022; Family Safe</span><span class="marquee-item">FRESH INGREDIENTS</span>
+    <span class="marquee-item hl">&#10022; Maharashtra Made</span><span class="marquee-item">TRADITIONAL RECIPES</span>
+    <span class="marquee-item hl">&#10022; 15 Years Legacy</span><span class="marquee-item">PREMIUM QUALITY</span>
+    <span class="marquee-item hl">&#10022; Pure Spices</span><span class="marquee-item">NO ARTIFICIAL COLOR</span>
+    <span class="marquee-item hl">&#10022; Family Safe</span><span class="marquee-item">FRESH INGREDIENTS</span>
+    <span class="marquee-item hl">&#10022; Maharashtra Made</span><span class="marquee-item">TRADITIONAL RECIPES</span>
+    <span class="marquee-item hl">&#10022; 15 Years Legacy</span><span class="marquee-item">PREMIUM QUALITY</span>
+  </div>
+</div>
+
+<section class="newsletter-section">
+  <div class="newsletter-inner reveal">
+    <h2>Join Our <em>Spice</em> Family</h2>
+    <p>Subscribe to receive recipes, seasonal offers, and the latest from our kitchen.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Swaraj Masale">
+      <p>Pure, aromatic, and authentically crafted Indian spices from the heart of Maharashtra. Bringing generations of flavour to your table.</p>
+      <div class="footer-social">
+        <a href="#" class="social-pill">WA</a>
+        <a href="#" class="social-pill">FB</a>
+        <a href="#" class="social-pill">IG</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="files/Rate card - Swaraj masale.pdf" download>Rate Card</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Products</h5>
+      <ul>
+        <li><a href="product.html">Chilli Powders</a></li>
+        <li><a href="product.html">Biryani Masala</a></li>
+        <li><a href="product.html">Meat Masala</a></li>
+        <li><a href="product.html">Kitchen King</a></li>
+        <li><a href="product.html">Fish Masala</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <div class="footer-contact-item"><span class="ic">&#128222;</span><span>+91 9834879138</span></div>
+      <div class="footer-contact-item"><span class="ic">&#128222;</span><span>+91 9881386503</span></div>
+      <div class="footer-contact-item"><span class="ic">&#128205;</span><span>Maharashtra, India</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2025 Swaraj Masale. All Rights Reserved.</p>
+    <div class="dev-credit">Technology Partner: <span>Lighthouse Institute, India</span></div>
+  </div>
 </footer>
-
-</body>
-</html>
-
+<button class="cart-float" onclick="openCart()">
+  &#128722; Place Order
+  <span class="cart-badge" id="cartCount">0</span>
+</button>
+<div class="modal-bg" id="cartModal">
+  <div class="cart-panel">
+    <div class="cart-panel-header">
+      <h3>Your Cart</h3>
+      <button class="close-btn" onclick="closeCart()">&#10005;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p style="color:var(--text-muted);text-align:center;padding:40px 20px;font-size:0.9rem;">Your cart is empty &#128722;</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Order Total</span>
+        <strong id="cartTotal">&#8377;0</strong>
+      </div>
+      <div class="cart-fields">
+        <input type="text" id="custName" placeholder="Your Name *">
+        <input type="tel" id="custPhone" placeholder="Contact Number *">
+        <textarea id="custAddress" placeholder="Delivery Address *" rows="2"></textarea>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">&#128241; Send Order via WhatsApp</button>
+    </div>
+  </div>
+</div>
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 10); });
+function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.getElementById('cartModal').addEventListener('click', function(e) { if (e.target === this) closeCart(); });
+window.toggleMobile = toggleMobile;
+window.closeMobile = closeMobile;
+</script>
+<script src="scripts/scripts.js"></script>
+</body></html>
