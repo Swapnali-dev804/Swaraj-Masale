@@ -274,7 +274,7 @@ a { text-decoration: none; }
 
 @media (max-width: 768px) {
   .cart-float {
-    bottom: 12px;
+    bottom: 25px;
     right: 12px;
     padding: 8px 12px;
     font-size: 0.65rem;
