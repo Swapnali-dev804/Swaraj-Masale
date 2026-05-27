@@ -445,3 +445,49 @@ a { text-decoration: none; }
   .hero-indicators { left: 50%; transform: translateX(-50%); bottom: 85px; }
   .nav-logo img { height: 58px !important; }
 }
+
+
+
+/* CART FIX FOR MOBILE */
+@media (max-width: 768px) {
+  .cart-panel {
+    height: 100dvh; /* better mobile viewport height */
+  }
+
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    min-height: 0;
+  }
+
+  .cart-footer {
+    position: sticky;
+    bottom: 0;
+    background: var(--cream);
+    padding: 14px;
+    border-top: 2px solid var(--border);
+    z-index: 5;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 13px;
+    font-size: 0.78rem;
+  }
+
+  .cart-fields {
+    gap: 7px;
+    margin-bottom: 10px;
+  }
+
+  .cart-fields input,
+  .cart-fields textarea {
+    padding: 9px 12px;
+    font-size: 0.82rem;
+  }
+
+  .cart-total strong {
+    font-size: 1.45rem;
+  }
+}
