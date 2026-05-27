@@ -110,6 +110,12 @@ a { text-decoration: none; }
 .btn-add { background: var(--espresso); border: none; padding: 10px 18px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: white; cursor: pointer; transition: background 0.2s; }
 .btn-add:hover { background: var(--crimson); }
 
+@media (max-width: 768px) {
+  .pcard-img-wrap {
+    height: 60vh;
+  }
+}
+
 .pcard-overlay {
   position: absolute;
   left: 0;
