@@ -112,7 +112,7 @@ a { text-decoration: none; }
 
 @media (max-width: 768px) {
   .pcard-img-wrap {
-    height: 80vh;
+    height: 70vh;
   }
 }
 
